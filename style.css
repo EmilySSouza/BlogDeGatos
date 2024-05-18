@@ -139,11 +139,11 @@ section .grid {
 }
 
 .text h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .text p {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: var(--color-p-black);
 }
 

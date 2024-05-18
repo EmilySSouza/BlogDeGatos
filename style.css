@@ -143,9 +143,8 @@ section .grid {
 }
 
 .text p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: var(--color-p-black);
-  max-height: 8.4rem;
 }
 
 footer {

@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Mulish", sans-serif;
+
+  --color-base-dark: hsl(240, 6%, 13%);
+  --color-p-black: hsl(240, 5%, 7%);
+  --color-footer-blue: hsl(195, 46%, 40%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+header {
+  min-width: 43rem;
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+
+  padding: 1.6rem 2.4rem;
+
+  background-color: #065E7C;
+}
+
+header nav img{
+  width: 4.0rem;
+  height: 4.0rem;
+}
+
+header form {
+  flex: 1;
+}
+
+.avatar {
+  border-radius: 50%;
+
+  width: 5.2rem;
+  height: 5.2rem;
+
+  object-fit: cover;
+}
+
+.input-wrapper label{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 1.6rem;
+
+  background-color: hsl(0, 0%, 100%, 20%);
+  border-radius: .4rem;
+  border: 0;
+  box-shadow: 0px 4px hsl(0, 0%, 0%, 20%);
+}
+
+.input-wrapper input::placeholder {
+  color: white;
+  font-size: 1.6rem;
+}
+
+main {
+  min-width: 43rem;
+}
+
+main #img{
+  width: 100%;
+}
+
+main h1 {
+  font-size: 2.4rem;
+  line-height: 160%;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+
+  color: var(--color-base-dark);
+}
+
+main .initial{
+  margin: 3.2rem 6.4rem 3.2rem 2.2rem;
+}
+
+main form {
+  display: flex;
+  gap: 1.2rem
+}
+
+main form button {
+  background-color: #065E7C;
+  width: 4.0rem;
+  height: 4.0rem;
+  border-radius: 50%;
+  border: 0;
+}
+            
+main form button .imgButton{
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+section {
+  margin: 3.2rem 2.4rem;
+}
+
+section h2 { 
+  color: var(--color-p-black);
+  font-size: 2.4rem;
+  line-height: 160%;
+}
+
+section a {
+  text-decoration: none;
+  color: var(--color-p-black);
+}
+
+section p {
+  color: var(--color-p-black);
+  font-size: 1.6rem;
+  line-height: 160%;
+}
+
+section img {
+  max-width: 15.1rem;
+  max-height: 8.4rem;
+}
+
+section .grid {
+  margin-top: 3.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.text h3 {
+  font-size: 1.8rem;
+}
+
+.text p {
+  font-size: 1.4rem;
+  color: var(--color-p-black);
+  max-height: 8.4rem;
+}
+
+footer {
+  margin-top: 3.6rem;
+  background-color: var(--color-footer-blue);
+  font-size: 1.6rem;
+  color: var(--color-white);
+}
+
+footer p {
+  padding: 2.4rem 1.6rem;
+  text-align: center;
+}
+
+#img:hover, a:hover {
+  filter: saturate(200%);
+}
+
+/* Resposividade */
+
+@media (min-width: 1020px) {
+  main{
+    display: grid;
+    grid-template-columns: repeat(2, 60% 40%);
+    gap: 3.2rem;
+    margin-top: 4.0rem;
+    align-items: start;
+    padding: 0 10rem;
+  }
+
+  main .initial {
+    margin: 3.2rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  section {
+    margin: 0;
+  }
+}
+/* Animações */
+
+header {
+  --starty:-100%;
+  animation: move .7s;
+}
+
+footer {
+  --starty: 100%;
+  animation: move .7s;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(var(--starty));
+  }
+}
+
+img {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}

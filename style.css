@@ -185,6 +185,20 @@ footer p {
   section {
     margin: 0;
   }
+
+  main form button {
+    background-color: #065E7C;
+    width: 4.0rem;
+    height: 4.0rem;
+    border-radius: 50%;
+    border: 0;
+  }
+              
+  main form button .imgButton{
+    height: 2rem;
+    width: 2rem;
+  }
+
 }
 /* Animações */
 
